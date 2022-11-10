@@ -11,37 +11,6 @@ body    {
     align-items: center;   
     background-color: rgb(230, 239, 237);
 }
-img {
-    width: 100%;
-    object-fit: cover;
-}
-.anhthang{
-    position: absolute;
-    left: 200px;
-    bottom: 1;
-    right: 0;
-    width: 340px;
-    height: 305px;   
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 0 50px #fa0101;
-}
-.anhduyen{
-    position: absolute;
-    bottom: 1;
-    right: 200px;
-    width: 340px;
-    height: 305px;   
-    border-radius: 15px;
-    overflow: hidden; 
-    box-shadow: 0 0 50px #fa0101;
-}
-h1{
-    position: absolute;
-    top: 50px;
-    color: #fa0101;
-    text-shadow:2px 2px #fcf9f9 ;
-}
 .heartBx{
     animation: animate alternate 0.5s infinite;
 }
@@ -49,9 +18,9 @@ h1{
     position: relative;
     width: 120px;
     height: 120px;
-    background:#fd0d42;
+    background:#000000;
     transform: rotate(45deg);
-    box-shadow: 0 0 50px #fd0d42;
+    box-shadow: 0 0 100px #000000;
 }
 .heart::before  {
     content:'';
@@ -61,9 +30,9 @@ h1{
     border-radius: 50%;
     top: 0;
     left: -50%;
-    background:#fd0d42;
     transform: rotate(45deg);
-    box-shadow: 0 0 50px #fd0d42;
+    box-shadow: 0 0 100 px #000000;
+    background-image: url('https://media3.giphy.com/media/26gIQ0DsLS5ydqHdK/giphy.gif?cid=790b761163b5f4985c409a2874b1414eea70eb68482dde3c&rid=giphy.gif&ct=g');
 }
 .heart::after  {
     content:'';
@@ -73,16 +42,19 @@ h1{
     border-radius: 50%;
     top: -50%;
     left:0;
-    background:#fd0d42;
     transform: rotate(45deg);
-    box-shadow: 0 0 50px #fd0d42;
+    box-shadow: 0 0 100px #000000;
+    background-image: url('https://media3.giphy.com/media/26gIQ0DsLS5ydqHdK/giphy.gif?cid=790b761163b5f4985c409a2874b1414eea70eb68482dde3c&rid=giphy.gif&ct=g');
 }
 
-@keyframes animate {
+@keyframes animate { 
     0%{
         transform: scale(1);
     }
-    100%{
+    50%{
         transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1.25);
     }
 }
