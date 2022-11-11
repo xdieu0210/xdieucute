@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: rgb(7, 7, 7);
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 100px auto;
+}
+h1 {
+    font-size: 5em;
+    color: #222;
+}
+h1::before {
+    content: attr(data-text);
+    position: absolute;
+    color: #fff;
+    width: 350px;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 4px solid #fff;
+    animation: animaText 8s linear infinite;
+}
+
+@keyframes animaText {
+   0% {
+       width: 0;
+   } 
+   100%{
+       width: 100%;
+   }
+}
+.heartBx{
+    animation: animate alternate 0.5s infinite;
+}
+.heart    {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    background:#ec2121;
+    transform: rotate(45deg);
+    background-color: #ec2121;
+    box-shadow: 0 0 100px #ec2121;
+}
+.heart::before  {
+    content:'';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    top: 0;
+    left: -50%;
+    transform: rotate(45deg);
+    box-shadow: 0 0 100px #ec2121;
+    background-color: #ec2121;
+}
+.heart::after  {
+    content:'';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    top: -50%;
+    left:0;
+    transform: rotate(45deg);
+    box-shadow: 0 0 100px #ec2121;
+    background-color: #ec2121;
+}   
+@keyframes animate { 
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1.25);
+    }
+}
+.vitrihb{
+    position: relative;
+    top: -200px;
+    left: center;
+
+}
